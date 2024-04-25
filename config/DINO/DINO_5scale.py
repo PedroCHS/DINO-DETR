@@ -1,6 +1,6 @@
 _base_ = ['coco_transformer.py']
 
-num_classes=91
+num_classes=2
 
 lr = 0.0001
 param_dict_type = 'default'
@@ -9,7 +9,7 @@ lr_backbone_names = ['backbone.0']
 lr_linear_proj_names = ['reference_points', 'sampling_offsets']
 lr_linear_proj_mult = 0.1
 ddetr_lr_param = False
-batch_size = 1
+batch_size = 8
 weight_decay = 0.0001
 epochs = 12
 lr_drop = 11
@@ -100,7 +100,7 @@ dn_number = 100
 dn_box_noise_scale = 0.4
 dn_label_noise_ratio = 0.5
 embed_init_tgt = True
-dn_labelbook_size = 91
+dn_labelbook_size = 2
 
 match_unstable_error = True
 
